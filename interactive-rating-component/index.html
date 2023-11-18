@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <script src="./scripts/app.js"defer></script>
+  <title>Interactive Rating Component</title>
+</head>
+<body>
+  <main>
+    <div class="card rate">
+      <img class="star" src="./images/icon-star.svg" alt="star icon">
+      <h1>How did we do?</h1>
+      <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+      <div class="ratings-container">
+        <div class="rating" data-number="1">1</div>
+        <div class="rating" data-number="2">2</div>
+        <div class="rating" data-number="3">3</div>
+        <div class="rating" data-number="4">4</div>
+        <div class="rating" data-number="5">5</div>
+      </div>
+      
+      <button>Submit</button>
+      
+    </div>
+
+    <div class="card thank-you hide">
+      <img class="thank-img" src="./images/illustration-thank-you.svg" alt="thank you picture">
+      <div class="message"><p>You selected 4 out of 5</p></div>
+
+      <h1>Thank you!</h1>
+      <p>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!
+      </p>
+    </div>
+
+    
+  </main>
+</body>
+</html>

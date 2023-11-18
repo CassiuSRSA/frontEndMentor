@@ -1,0 +1,36 @@
+.summary {
+  width: 50%;
+  padding: 2rem 2.5rem;
+}
+
+.summary__title {
+  margin-bottom: 1rem;
+  color: hsl(224, 30%, 27%);
+}
+
+.summary__btn {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  width: 100%;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 25px;
+  background: hsl(224, 30%, 27%);
+  margin: 1rem 0;
+}
+
+.summary__btn:hover,
+.summary__btn:active {
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .summary {
+    width: 100%;
+  }
+  .summary__btn {
+    background: hsl(224, 30%, 27%);
+  }
+}

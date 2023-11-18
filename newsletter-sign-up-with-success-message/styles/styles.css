@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  /* colors */
+  --tomato: hsl(4, 100%, 67%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+
+  /* fonts */
+  --font: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+  font-family: var(--font);
+}
+
+h1 {
+  color: var(--dark-slate-grey);
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+li {
+  margin-bottom: 0.8rem;
+}
+
+li::before {
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-size: cover;
+  background-image: url("../images/icon-list.svg");
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  background-position: center center;
+  vertical-align: middle;
+}
+
+p,
+li {
+  font-size: 16px;
+  color: var(--charcoal-grey);
+  font-weight: 400;
+}
+
+label,
+input {
+  display: block;
+  width: 100%;
+  color: var(--charcoal-grey);
+}
+label {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  border: 1px solid var(--grey);
+}
+
+button {
+  border: none;
+  width: 100%;
+  background: var(--dark-slate-grey);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+button:hover {
+  background: linear-gradient(
+    114deg,
+    rgba(255, 98, 87, 1) 0%,
+    rgba(255, 137, 87, 1) 100%
+  );
+
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+body {
+  background-color: var(--charcoal-grey);
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  padding: 1rem;
+  border-radius: 30px;
+  background-color: var(--white);
+  max-width: 58rem;
+}
+
+.newsletter__content {
+  padding: 3rem;
+  max-width: 55%;
+}
+
+.container.success-container {
+  max-width: 32rem;
+}
+
+#success h1 {
+  line-height: 1;
+  margin-bottom: 1.4rem;
+}
+
+.success__content {
+  padding: 3rem;
+  width: 100%;
+}
+
+#success img {
+  margin-bottom: 2rem;
+}
+
+.open {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
