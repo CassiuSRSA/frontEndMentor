@@ -1,0 +1,126 @@
+/* Font import Big Shoulders Display and Lexend Deca */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* Master Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Setting Variables */
+:root {
+  /* Primary Colors */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  /* Neutral Colors */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+
+  font-size: 15px;
+}
+
+body {
+  width: 100%;
+  min-heigth: 100vh;
+  background-color: var(--very-light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-container {
+  display: flex;
+  width: 70%;
+  margin: 100px auto;
+}
+
+.card {
+  width: 100%;
+  max-width: 375px;
+  min-width: 300px;
+  min-height: 550px;
+  padding: 50px;
+  max-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  margin-bottom: 30px;
+}
+
+h1 {
+  color: var(--very-light-gray);
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+p {
+  color: var(--transparent-white);
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding-right: 30px;
+  margin-bottom: 50px;
+}
+
+button{
+  background-color: var(--transparent-white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 40px;
+  font-family: 'lexend Deca', sans-serif;
+  font-size: 1.2rem;
+  width: 80%;
+  min-width: 150px;
+}
+
+
+.card-1 {
+  background: var(--bright-orange);
+  border-radius: 15px 0 0 15px;
+}
+
+.card-1 button {
+  color: var(--bright-orange)
+}
+
+.card-2 {
+  background: var(--dark-cyan);
+}
+
+.card-2 button {
+  color: var(--dark-cyan)
+}
+
+.card-3 {
+  background: var(--very-dark-cyan);
+  border-radius: 0 15px 15px 0;
+}
+
+.card-3 button {
+  color: var(--very-dark-cyan)
+}
+
+@media(max-width: 1000px) {
+  body{
+    margin: 20px 10px;
+  }
+  .cards-container {
+    flex-direction: column;
+  }
+
+  .card-1 {
+    border-radius: 15px 15px 0 0;
+  }
+
+  .card-3 {
+    border-radius: 0 0 15px 15px;
+  }
+}
