@@ -1,0 +1,135 @@
+/* Reset */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+/* Body format */
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: url(images/pattern-background-desktop.svg) no-repeat;
+  background-size: 100% 500px;
+  background-color: hsl(225, 100%, 98%);
+}
+
+/* Card formatting */
+
+.card-container {
+  background-color: white;
+  min-height: 70vh;
+  min-width: 375px;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 2px 5px -1px rgba(0,0,0,0.75);
+}
+
+/* hero image formatting*/
+.hero {
+  height: 20vh;
+  width: 100%;
+  background: url(images/illustration-hero.svg) no-repeat center/cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.card-content {
+  margin: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.heading, 
+.para, 
+.plan-select  {
+  margin-bottom: 30px;
+}
+
+.heading {
+  color: #3c48b5
+}
+
+.para, .plan-select {
+  color: #1d2459
+}
+
+.plan-select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f7f7;
+  width: 90%;
+  border-radius: 20px;
+  padding: 10px;
+  
+}
+
+.plan-info {
+  margin-left: 10px;
+}
+
+.right-content {
+  display: flex;
+}
+
+.change-link {
+  font-weight: 600;
+  color: #ac51fc;
+}
+
+.change-link a:hover, 
+.change-link a:active,
+.change-link a:focus {
+  text-decoration: none;
+  color: #9849de;
+  cursor: pointer;
+}
+
+.payment {
+  background: #3c48b5;
+  border-radius: 20px;
+  width: 90%;
+  border: none;
+  padding: 15px;
+  color: white;
+  font-size: large;
+  box-shadow: 1px 17px 37px -11px rgba(0,0,0,0.75);
+}
+
+.payment:hover, 
+.payment:active, 
+.payment:focus {
+  background: #515cfc;
+  cursor: pointer;
+}
+
+.cancel {
+  background: none;
+  border-radius: 20px;
+  border: none;
+  margin-top: 40px;
+  font-size: large;
+  font-weight: 500;
+}
+
+.cancel:hover, 
+.cancel:active, 
+.cancel:focus {
+  cursor: pointer;
+  color: #5e5e5e
+}
+
+
+
+
+
+
+
+
