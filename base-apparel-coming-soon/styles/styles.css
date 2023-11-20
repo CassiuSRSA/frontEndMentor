@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+:root {
+  /* colors */
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+
+  --darkish-gray-red: hsl(0, 6%, 24%);
+
+  /* gradients */
+  --gradient-1: 135deg, from hwb(0 100% 0%), to hsl(0, 100%, 98%);
+  --gradient-2: 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(135deg, hwb(0 100% 0%), hsl(0, 100%, 98%));
+  overflow: hidden;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+
+  margin: 0 auto;
+  background: no-repeat url("../images/bg-pattern-desktop.svg") center
+    center/cover;
+}
+
+.card {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  max-width: 1440px;
+}
+
+.logo {
+  position: absolute;
+  height: 2rem;
+  width: auto;
+  top: 3rem;
+  left: 5rem;
+}
+
+.card__information {
+  background-image: linear-gradient(var(--gradient-1));
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 5rem;
+}
+
+.card__hero {
+  width: 50%;
+}
+
+.mobile-hero {
+  display: none;
+}
+
+.card__hero img {
+  height: 100%;
+  width: auto;
+}
+
+.card__heading {
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  margin-bottom: 1rem;
+  color: var(--darkish-gray-red);
+}
+.card__heading span {
+  color: var(--desaturated-red);
+  font-weight: 300;
+}
+
+.card__details {
+  font-size: 16px;
+  color: var(--desaturated-red);
+  max-width: 27rem;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.card__form {
+  position: relative;
+  width: 25rem;
+  padding: 0.8rem;
+  border: 1px hsla(0, 6%, 24%, 0.2) solid;
+  display: flex;
+  border-radius: 30px;
+}
+
+input {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  padding: 0 1rem;
+  color: var(--darkish-gray-red);
+  outline: none;
+  width: 65%;
+}
+
+input:focus {
+  background: none;
+}
+
+::placeholder {
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+}
+
+button {
+  position: absolute;
+  height: 100%;
+  width: 5.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  padding: 0.8rem;
+  top: 0;
+  right: 0;
+  border-radius: 30px;
+  transition: all 250ms ease-in;
+}
+
+button:hover,
+button:active {
+  transform: scale(1);
+  background-image: linear-gradient(
+    135deg,
+    hsla(0, 80%, 86%, 0.9),
+    hsla(0, 74%, 74%, 0.9)
+  );
+  box-shadow: 0px 10px 15px -11px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.error-icon {
+  display: none;
+}
+
+.error-message {
+  color: var(--soft-red);
+  margin: 1rem;
+  font-weight: 400;
+  font-size: 14px;
+  display: none;
+}
+
+.error-icon.error {
+  display: block;
+}
+
+.error-message.error {
+  display: block;
+}
+
+.error-message.success {
+  display: block;
+  color: var(--darkish-gray-red);
+}
+
+.card__form.error {
+  border: 2px solid var(--soft-red);
+}
+
+@media (max-width: 660px) {
+  body {
+    overflow: auto;
+  }
+  .logo {
+    height: 25px;
+    width: auto;
+    top: 40px;
+    left: 30px;
+    margin-bottom: 2rem;
+  }
+  .card__hero {
+    display: none;
+  }
+
+  .mobile-hero {
+    width: 100%;
+    object-fit: contain;
+    padding-top: 100px;
+    margin-bottom: 4rem;
+    display: block;
+  }
+
+  .card {
+    min-height: 100vh;
+    flex-direction: column;
+    display: block;
+    padding-bottom: 2rem;
+  }
+
+  .card__heading {
+    font-size: 3rem;
+  }
+
+  .card__information {
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .card__details {
+    display: block;
+    margin: 0 3rem 2.5rem 3rem;
+  }
+
+  .card__form {
+    margin: 0 2rem 2rem 2rem;
+  }
+
+  .error-message {
+    margin: 0 1rem;
+  }
+}
